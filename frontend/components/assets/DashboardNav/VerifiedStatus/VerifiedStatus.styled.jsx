@@ -1,0 +1,19 @@
+import styled from "styled-components";
+
+export const VerifiedStatus = styled.div`
+  width: 100px;
+  height: 30px;
+  border: 2px solid #3b3b3d;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 0.7rem;
+  background-color: #00000040;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+  transform: translate(50%, 0%);
+  bottom: 10px;
+`;

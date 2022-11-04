@@ -1,0 +1,25 @@
+.eventTileBig {
+  border: 2px solid #3b3b3d;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-image: url("/julnft.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 900px) {
+  .eventTileBig {
+    width: 95%;
+    height: 420px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 901px) {
+  .eventTileBig {
+    width: 90%;
+    height: 400px;
+  }
+}

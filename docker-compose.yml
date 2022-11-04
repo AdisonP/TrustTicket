@@ -1,0 +1,38 @@
+version: "3"
+services:
+  db:
+    image: mysql
+    container_name: mysql_db
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+      - MYSQL_DATABASE=${DB_NAME}
+    ports:
+      - 3306:3306
+  frontend:
+    restart: always
+    build: frontend
+    container_name: tt_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - API_URL=http://localhost:8080
+
+  backend:
+    restart: always
+    build: back
+    container_name: tt_backend
+
+    ports:
+      - "8080:8080"
+    links:
+      - "db:database"
+    depends_on:
+      - "db"
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - PORT=${PORT}

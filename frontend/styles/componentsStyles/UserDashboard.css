@@ -1,0 +1,31 @@
+.user-dashboard {
+  width: 100%;
+  height: 100%;
+}
+
+.user-dashboard-top {
+  min-width: 100%;
+  height: 50%;
+}
+
+.user-dashboard-bottom {
+  min-width: 100%;
+  height: 50%;
+}
+
+.user-dashboard-infos-tickets-title {
+  color: white;
+}
+
+.user-dashboard-infos-wallet-title {
+  color: white;
+}
+
+.user-dashboard-tickets-div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  padding-right: 2rem;
+}

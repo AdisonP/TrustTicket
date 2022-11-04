@@ -1,0 +1,41 @@
+.categoriesNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 40%;
+  margin: auto;
+  height: 50px;
+
+  @media (max-width: 900px) {
+    justify-content: space-between;
+    width: 90%;
+  }
+}
+
+.categoriesNav-button {
+  width: 80px;
+  height: 25px;
+  border: 1px solid #54d2fd;
+  border-radius: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.categoriesNav-button-selected {
+  width: 80px;
+  height: 25px;
+  background-color: #54d2fd;
+  border: 1px solid #54d2fd;
+  border-radius: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  cursor: pointer;
+}

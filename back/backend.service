@@ -1,0 +1,15 @@
+[Unit]
+Description="Trust ticket backend service"
+
+[Service]
+ExecStart=/usr/bin/npm start
+WorkingDirectory=/home/trust/T-YEP-600-MAR-6-1-finalproject-felix.portier/back
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=TTbackend
+Environment=NODE_ENV=production PORT=8080
+
+[Install]
+WantedBy=multi-user.target
